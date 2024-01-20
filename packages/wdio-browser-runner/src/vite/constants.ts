@@ -52,7 +52,7 @@ export const DEFAULT_VITE_CONFIG: Partial<InlineConfig> = {
             },
             // Enable esbuild polyfill plugins
             plugins: [
-                esbuildCommonjs(['@testing-library/vue']),
+                esbuildCommonjs(['@testing-library/vue', '@testing-library/preact', '@testing-library/svelte']),
                 codeFrameFix()
             ],
         },

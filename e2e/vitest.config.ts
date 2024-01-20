@@ -7,11 +7,5 @@ export default defineConfig({
         include: ['./e2e/**/*.test.ts'],
         hookTimeout: 60 * 1000,
         threads: false
-    },
-    optimizeDeps: {
-        exclude: [ 
-            '@testing-library/preact',
-            '@testing-library/svelte'
-        ]
     }
 })
