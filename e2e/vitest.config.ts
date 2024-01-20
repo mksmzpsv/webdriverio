@@ -7,5 +7,8 @@ export default defineConfig({
         include: ['./e2e/**/*.test.ts'],
         hookTimeout: 60 * 1000,
         threads: false
+    },
+    optimizeDeps: {
+        force: true
     }
 })
