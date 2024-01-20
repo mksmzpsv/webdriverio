@@ -9,6 +9,6 @@ export default defineConfig({
         threads: false
     },
     optimizeDeps: {
-        force: true
+        exclude: [ '@testing-library/preact' ]
     }
 })
