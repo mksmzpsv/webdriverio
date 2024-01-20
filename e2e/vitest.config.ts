@@ -9,6 +9,9 @@ export default defineConfig({
         threads: false
     },
     optimizeDeps: {
-        exclude: [ '@testing-library/preact' ]
+        exclude: [ 
+            '@testing-library/preact',
+            '@testing-library/svelte'
+        ]
     }
 })
