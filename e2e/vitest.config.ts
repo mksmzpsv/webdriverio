@@ -9,7 +9,7 @@ export default defineConfig({
         threads: false,
         server: {
             deps: {
-                inline: [
+                external: [
                     '@testing-library/svelte',
                     '@testing-library/preact'
                 ]
