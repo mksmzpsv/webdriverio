@@ -7,15 +7,14 @@ export default defineConfig({
         include: ['./e2e/**/*.test.ts'],
         hookTimeout: 60 * 1000,
         threads: false,
-        server: {
-            deps: {
-                external: [
-                    '@testing-library/svelte',
-                    '@testing-library/jest-dom',
-                    '@testing-library/user-event',
-                    '@testing-library/react',
-                    '@testing-library/preact'
-                ]
+        deps: {
+            optimizer: {
+                web: {
+                    force: true
+                },
+                ssr: {
+                    force: true
+                }
             }
         }
     }
