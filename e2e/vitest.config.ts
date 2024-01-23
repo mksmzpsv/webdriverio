@@ -10,10 +10,14 @@ export default defineConfig({
         deps: {
             optimizer: {
                 web: {
-                    force: true
+                    optimizeDeps: {
+                        force: true
+                    }
                 },
                 ssr: {
-                    force: true
+                    optimizeDeps: {
+                        force: true
+                    }
                 }
             }
         }
