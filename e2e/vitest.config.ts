@@ -9,7 +9,7 @@ export default defineConfig({
         threads: false,
         server: {
             deps: {
-                cacheDir: 'node_modules/.vite-test'
+                cacheDir: process.cwd() + '/e2e/node_modules/.vite-e2e'
             }
         },
         deps: {
@@ -28,6 +28,6 @@ export default defineConfig({
                 },
             }
         },
-        root: './e2e/'
+        root: process.cwd() + '/e2e/'
     }
 })
