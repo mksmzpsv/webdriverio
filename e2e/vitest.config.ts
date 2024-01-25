@@ -27,6 +27,7 @@ export default defineConfig({
                     ],
                 },
             }
-        }
+        },
+        root: './e2e/'
     }
 })
