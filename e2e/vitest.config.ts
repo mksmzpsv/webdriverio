@@ -9,10 +9,23 @@ export default defineConfig({
         threads: false,
         server: {
             deps: {
-                external: [
-                    '@testing-library/svelte',
-                    '@testing-library/preact'
-                ]
+                cacheDir: 'node_modules/.vite-test'
+            }
+        },
+        deps: {
+            optimizer: {
+                web: {
+                    exclude: [
+                        '@testing-library/preact',
+                        '@testing-library/svelte'
+                    ],
+                },
+                ssr: {
+                    exclude: [
+                        '@testing-library/preact',
+                        '@testing-library/svelte'
+                    ],
+                },
             }
         }
     }
