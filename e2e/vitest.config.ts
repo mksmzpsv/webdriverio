@@ -19,7 +19,7 @@ export default defineConfig({
         //     }
         // },
         testTransformMode: {
-            ssr: ['./e2e/pr-eact.test.ts', './e2e/svelte.test.ts']
+            web: ['./e2e/pr-eact.test.ts', './e2e/svelte.test.ts']
         }
     }
 })
