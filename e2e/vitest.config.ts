@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
     test: {
@@ -7,17 +7,19 @@ export default defineConfig({
         include: ['./e2e/**/*.test.ts'],
         hookTimeout: 60 * 1000,
         threads: false,
-        deps: {
-            optimizer: {
-                ssr: {
-                    enabled: true,
-                    include: [
-                        '@testing-library/preact',
-                        '@testing-library/svelte'
-                    ],
-                },
-            }
-        },
-        root: process.cwd() + '/e2e/'
+        // deps: {
+        //     optimizer: {
+        //         ssr: {
+        //             enabled: true,
+        //             include: [
+        //                 '@testing-library/preact',
+        //                 '@testing-library/svelte'
+        //             ],
+        //         },
+        //     }
+        // },
+        testTransformMode: {
+            ssr: ['./e2e/pr-eact.test.ts', './e2e/svelte.test.ts']
+        }
     }
 })
